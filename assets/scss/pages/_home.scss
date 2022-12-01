@@ -1,0 +1,170 @@
+body {
+    background-color: lightblue;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    padding: 100px;
+    margin: 0 auto;
+    top: 8%;
+    left: 10%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+
+    .input-part {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        background-color: white;
+        gap: 20px;
+
+        &-heading {
+            text-align: center;
+            width: 100%;
+            font-size: 19px;
+            text-transform: capitalize;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        &-ourInput {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            input {
+                font-family: 'Poppins', sans-serif;
+                width: 70%;
+                border: none;
+                background-color: lightblue;
+                font-size: 15px;
+                color: black;
+                font-weight: 600;
+                border-radius: 10px;
+                line-height: 2.9;
+                padding-left: 10px;
+            }
+
+            button {
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                border: none;
+                color: black;
+                background-color: lightgray;
+                width: 20%;
+                border-radius: 10px;
+                line-height: 3.2;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .lists {
+        width: 100%;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            width: 100%;
+            gap: 10px;
+
+            .task-list-item {
+                padding: 0 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                border-radius: 10px;
+                width: 100%;
+                font-family: 'Poppins', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                border: none;
+                color: black;
+                line-height: 3.2;
+                pointer-events: none;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+                button{
+                    width: 20px;
+                    border: none;
+                    background-color: white;
+
+                    i{
+                        font-size: 15px;
+                        color: black;
+                        z-index: 11;
+                    }
+                }
+                span {
+                    max-width: 80%;
+                    word-wrap: break-word;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+
+    #clear-all {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        color: white;
+        background-color: grey;
+        width: 20%;
+        border-radius: 10px;
+        line-height: 3.2;
+    }
+}
+
+.bg-white {
+    color: black;
+    background-color: white;
+}
+
+.bg-check {
+    background-color: rgb(51, 97, 97);
+    color: white;
+    transition: 0.4s;
+    animation-name: CheckedAnimation;
+    text-decoration: line-through;
+    animation-duration: 1s;
+    animation-delay: 1;
+}
+@keyframes CheckedAnimation {
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 0;
+    }
+}
